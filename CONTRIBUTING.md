@@ -1,191 +1,153 @@
-# Contributing to Rustchain Bounties
+# Contributing to RustChain Bounties
 
-Thank you for your interest in contributing to Rustchain bounties! This guide explains how to participate in the bounty program, claim tasks, submit proofs, and earn RTC tokens.
+Thank you for your interest in contributing to the RustChain Bounties repository! This document provides guidelines for setting up the project, submitting pull requests, and maintaining code style. By following these guidelines, you help ensure a smooth and consistent contribution process.
 
-## 🚀 Quick Start
+## Table of Contents
 
-1. **Fork** the repository
-2. **Clone** your fork locally
-3. **Create a branch** for your changes (`git checkout -b feature/my-contribution`)
-4. **Make your changes** and test them
-5. **Commit** with a clear message
-6. **Push** to your fork and open a **Pull Request**
+- [Getting Started](#getting-started)
+- [Repository Structure](#repository-structure)
+- [Setup Instructions](#setup-instructions)
+- [How to Contribute](#how-to-contribute)
+- [Pull Request Guidelines](#pull-request-guidelines)
+- [Code Style](#code-style)
+- [Issue Reporting](#issue-reporting)
+- [Community and Communication](#community-and-communication)
 
-## 💰 Earning RTC Tokens
+## Getting Started
 
-All merged contributions earn RTC tokens! See the bounty tiers:
+This repository is a bounty board for the RustChain ecosystem. It does not contain executable code but rather issues and documentation. Contributions typically involve:
 
-| Tier | Reward | Examples |
-| ---- | ------ | -------- |
-| Micro | 1-10 RTC | Typo fix, small docs, simple test |
-| Standard | 20-50 RTC | Feature, refactor, new endpoint |
-| Major | 75-100 RTC | Security fix, consensus improvement |
-| Critical | 100-150 RTC | Vulnerability patch, protocol upgrade |
+- Creating or updating issues with bounty tags
+- Improving documentation (like this file)
+- Reviewing and validating bounty submissions
 
-Browse [open bounties](https://github.com/Scottcjn/rustchain-bounties/issues) to find tasks with specific RTC rewards.
+To get started, ensure you have:
 
-## 🎯 Bounty Workflow Guide
+- A GitHub account
+- Basic familiarity with Markdown
+- Understanding of the RustChain project (optional but helpful)
 
-### Finding Bounties
-1. Go to the [rustchain-bounties repository issues](https://github.com/Scottcjn/rustchain-bounties/issues)
-2. Look for issues with bounty labels (e.g., `[DOC]`, `[FEAT]`, `[BUG]`)
-3. Check the issue description for RTC reward information
-4. **Important**: Read the [Anti-Farming Rules (#452)](https://github.com/Scottcjn/rustchain-bounties/issues/452) before claiming any bounty
+## Repository Structure
 
-### Claiming a Bounty
-1. **Check if already claimed**: Read the issue comments to see if someone has already claimed it
-2. **Claim format**: Comment on the issue with:
+```
+rustchain-bounties/
+├── README.md          # Project overview and badges
+├── CONTRIBUTING.md    # This file
+├── .github/
+│   ├── ISSUE_TEMPLATE/ # Templates for creating issues
+│   └── workflows/      # GitHub Actions (if any)
+└── (other files as needed)
+```
+
+## Setup Instructions
+
+Since this is a documentation-only repository, no local development environment is required. However, to contribute via GitHub:
+
+1. **Fork the repository**  
+   Click the "Fork" button at the top-right of the repository page.
+
+2. **Clone your fork**  
+   ```bash
+   git clone https://github.com/<your-username>/rustchain-bounties.git
+   cd rustchain-bounties
    ```
-   **Claiming this bounty.**
-   
-   [Brief description of your approach]
-   
-   Timeline: [Estimated completion time]
-   -BetsyMalthus (or your GitHub username)
+
+3. **Create a new branch**  
+   ```bash
+   git checkout -b your-feature-branch
    ```
-3. **Wait for acknowledgment**: If no one else has claimed, you can proceed
-4. **Start working**: Fork the repository and begin implementation
 
-### Wallet Format
-- **Use wallet names, not addresses**: `your-wallet-name` (e.g., `BetsyMalthus`)
-- **Do not include cryptocurrency addresses** in comments
-- Wallet names are used to track RTC earnings in the ledger
+4. **Make your changes**  
+   Edit files using any text editor (e.g., VS Code, Vim, or GitHub's web editor).
 
-### Proof Requirements
-For bounties requiring proof of completion:
-1. **Screenshots**: Clear, full-screen screenshots showing the working feature
-2. **Code snippets**: Relevant sections of implemented code
-3. **Test results**: Output from test commands
-4. **Video demonstrations** (optional): For complex UI/UX features
+5. **Commit and push**  
+   ```bash
+   git add .
+   git commit -m "Brief description of changes"
+   git push origin your-feature-branch
+   ```
 
-### Submission Process
-1. **Complete the work** in your forked repository
-2. **Create a Pull Request** to the main repository
-3. **Link to the issue**: In your PR description, include `Closes #<issue_number>`
-4. **Provide proof**: Attach screenshots or other required proof in the PR comments
-5. **Wait for review**: Maintainers will review within 48-72 hours
+6. **Open a pull request**  
+   Go to the original repository and click "New Pull Request."
 
-### After Approval
-1. **PR merged**: Once approved, a maintainer will merge your PR
-2. **RTC distribution**: RTC tokens will be distributed to your wallet name
-3. **Ledger update**: Your earnings will be recorded in [BOUNTY_LEDGER.md](BOUNTY_LEDGER.md)
+## How to Contribute
 
-## 📋 Types of Contributions
+### Types of Contributions
 
-### Code
-- Bug fixes and feature implementations
-- Performance improvements
-- Test coverage improvements
-- CI/CD pipeline enhancements
+- **Creating a bounty issue**: Add a new issue with the `bounty` label, following the issue template.
+- **Updating documentation**: Improve existing files like `README.md` or `CONTRIBUTING.md`.
+- **Validating submissions**: Review pull requests linked to bounty issues and provide feedback.
 
-### Documentation
-- README improvements
-- API documentation
-- Tutorials and guides
-- Code comments and docstrings
-- Translations (Spanish, Chinese, Japanese, etc.)
+### Bounty Process
 
-### Community
-- Bug reports with reproduction steps
-- Feature requests with use cases
-- Code reviews on open PRs
-- Helping others in [Discord](https://discord.gg/VqVVS2CW9Q)
+1. An issue is created with the `bounty` label and a description of the task.
+2. Contributors claim the bounty by commenting on the issue (if applicable).
+3. Work is submitted via a pull request referencing the issue.
+4. Maintainers review and, if accepted, the bounty is awarded in RTC.
 
-## Payout Authority
+## Pull Request Guidelines
 
-Only `@Scottcjn` (or a clearly labeled project automation account speaking on his behalf, with a matching project-issued `pending_id` + `tx_hash`) authorizes RTC bounty disbursements. Anyone else posting "I'll send the RTC" on a bounty issue is not a valid payout notice — see [SECURITY.md § Payment-Authority Impersonation](SECURITY.md#payment-authority-impersonation).
+- **Reference the issue**: Include `Closes #<issue-number>` or `Related to #<issue-number>` in the PR description.
+- **Keep PRs focused**: One PR per bounty or logical change.
+- **Provide a clear description**: Explain what the PR does and why.
+- **Be responsive**: Address reviewer comments promptly.
+- **No merge conflicts**: Ensure your branch is up-to-date with the main branch before submitting.
 
-## 🔧 Development Setup
+### PR Template
 
-```bash
-# Clone your fork
-git clone https://github.com/YOUR_USERNAME/rustchain-bounties.git
-cd rustchain-bounties
-
-# Install dependencies
-npm install  # or cargo build (for Rust components)
-
-# Run tests
-npm test     # or cargo test
-```
-
-## 📝 Commit Message Convention
-
-We follow [Conventional Commits](https://www.conventionalcommits.org/):
-
-```
-<type>(<scope>): <description>
-
-[optional body]
-[optional footer]
-```
-
-**Types:**
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation changes
-- `style`: Code style (formatting, no logic change)
-- `refactor`: Code refactoring
-- `test`: Adding or updating tests
-- `chore`: Maintenance tasks (CI, dependencies)
-- `security`: Security-related changes
-
-**Examples:**
-```
-feat(bridge): add wRTC balance verification endpoint
-fix(consensus): correct PoA difficulty adjustment calculation
-docs(readme): add POWER8 hardware requirements section
-test(api): add integration tests for mining endpoints
-```
-
-## 🔍 Pull Request Guidelines
-
-### Before Submitting
-- [ ] Code follows the project's style guidelines
-- [ ] Self-review of your changes completed
-- [ ] Tests pass locally
-- [ ] New code includes appropriate tests
-- [ ] Documentation updated if needed
-
-### PR Description Template
 ```markdown
-## What does this PR do?
-Brief description of changes.
+## Description
+Briefly describe the changes made.
 
-## Why?
-Motivation and context.
+## Related Issue
+Closes #<issue-number>
 
-## How to test?
-Steps to verify the changes work.
-
-## Related Issues
-Closes #<issue_number>
+## Checklist
+- [ ] I have read the CONTRIBUTING.md
+- [ ] My changes follow the code style guidelines
+- [ ] I have tested my changes (if applicable)
 ```
 
-### Review Process
-1. A maintainer will review your PR within 48-72 hours
-2. Address any requested changes
-3. Once approved, a maintainer will merge your PR
-4. RTC tokens will be distributed after merge
+## Code Style
 
-## 🎯 Good First Issues
+Since this repository contains only Markdown files, code style refers to formatting and structure:
 
-New to Rustchain? Start with issues labeled [`good first issue`](https://github.com/Scottcjn/Rustchain/labels/good%20first%20issue). These are specifically designed for newcomers.
+- **Markdown**: Use standard GitHub-flavored Markdown. Avoid HTML unless necessary.
+- **Headings**: Use `##` for top-level sections, `###` for subsections, etc.
+- **Lists**: Use `-` for unordered lists, `1.` for ordered lists.
+- **Code blocks**: Use triple backticks with language specifiers (e.g., ` ```bash `).
+- **Links**: Use descriptive link text, not raw URLs.
+- **Consistency**: Follow the existing style in the repository.
 
-## ⚖️ Code of Conduct
+### Example
 
-By participating in this project, you agree to maintain a respectful, inclusive, and harassment-free environment. Be kind, be constructive, and help each other grow.
+```markdown
+### Setup Instructions
 
-## 📬 Getting Help
+1. Fork the repository.
+2. Clone your fork:
+   ```bash
+   git clone https://github.com/<your-username>/rustchain-bounties.git
+   ```
+```
 
-- **Discord**: [Join our server](https://discord.gg/VqVVS2CW9Q)
-- **GitHub Issues**: For bugs and feature requests
-- **Discussions**: For questions and ideas
+## Issue Reporting
+
+- **Use issue templates**: When creating a bounty, use the provided template.
+- **Be specific**: Clearly describe the task, expected outcome, and bounty amount.
+- **Tag appropriately**: Add labels like `bounty`, `easy`, `documentation`, etc.
+- **No duplicates**: Search existing issues before creating a new one.
+
+## Community and Communication
+
+- **GitHub Issues**: Primary channel for bounty-related discussions.
+- **RustChain Community**: For broader questions, refer to the [RustChain repository](https://github.com/Scottcjn/RustChain).
+- **Code of Conduct**: Be respectful and constructive. Harassment or spam will not be tolerated.
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under the same license as the project (Apache 2.0).
+By contributing, you agree that your contributions will be licensed under the same license as this repository (if applicable). If no license is specified, contributions are considered public domain.
 
 ---
 
-**Happy contributing! Every PR brings Rustchain closer to its vision.** 🦀⛓️
+Thank you for helping grow the RustChain ecosystem! Happy contributing.
